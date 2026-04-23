@@ -18,8 +18,6 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
 html{scroll-behavior:smooth;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Georgia,serif;background:#f0f2f5;color:var(--text);min-height:100vh;overflow-x:hidden;}
-
-/* ── HEADER ── */
 .hdr{background:var(--navy);position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.2);}
 .hdr-inner{display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:56px;max-width:1100px;margin:0 auto;}
 .hdr-title{font-size:15px;font-weight:700;color:#fff;line-height:1.2;}
@@ -29,56 +27,28 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Georgia,serif;backg
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-/* ── MOBILE MENU DRAWER ── */
-.nav-drawer{
-  position:fixed;top:56px;left:0;right:0;background:var(--navy);
-  transform:translateY(-110%);transition:transform .3s ease;z-index:190;
-  box-shadow:0 8px 24px rgba(0,0,0,.3);
-}
+.nav-drawer{position:fixed;top:56px;left:0;right:0;background:var(--navy);transform:translateY(-110%);transition:transform .3s ease;z-index:190;box-shadow:0 8px 24px rgba(0,0,0,.3);}
 .nav-drawer.open{transform:translateY(0);}
-.nav-drawer a{
-  display:block;color:rgba(255,255,255,.8);font-size:15px;padding:16px 20px;
-  border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer;
-  transition:background .15s;text-decoration:none;font-family:inherit;
-}
+.nav-drawer a{display:block;color:rgba(255,255,255,.8);font-size:15px;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer;transition:background .15s;text-decoration:none;font-family:inherit;}
 .nav-drawer a:active,.nav-drawer a.active{background:rgba(255,255,255,.12);color:#fff;font-weight:700;}
 .nav-overlay{display:none;position:fixed;inset:0;z-index:180;}
 .nav-overlay.open{display:block;}
-
-/* Desktop nav */
 .nav-desktop{display:none;gap:2px;}
-@media(min-width:700px){
-  .hamburger{display:none;}
-  .nav-desktop{display:flex;}
-  .nav-drawer{display:none;}
-}
-.nav-btn{
-  background:none;border:none;color:rgba(255,255,255,.6);font-family:inherit;
-  font-size:13px;padding:8px 12px;cursor:pointer;border-radius:6px;transition:all .15s;white-space:nowrap;
-}
+@media(min-width:700px){.hamburger{display:none;}.nav-desktop{display:flex;}.nav-drawer{display:none;}}
+.nav-btn{background:none;border:none;color:rgba(255,255,255,.6);font-family:inherit;font-size:13px;padding:8px 12px;cursor:pointer;border-radius:6px;transition:all .15s;white-space:nowrap;}
 .nav-btn:hover{background:rgba(255,255,255,.1);color:#fff;}
 .nav-btn.active{background:rgba(255,255,255,.18);color:#fff;font-weight:700;}
-
-/* ── PAGES ── */
-.page{display:none;}
-.page.active{display:block;}
+.page{display:none;}.page.active{display:block;}
 .container{max-width:1100px;margin:0 auto;padding:16px;}
 @media(min-width:600px){.container{padding:24px 32px;}}
-
-/* ── HERO ── */
 .hero{background:linear-gradient(135deg,var(--navy) 0%,#2a4a7a 100%);color:#fff;padding:28px 20px;text-align:center;}
 .hero h1{font-size:22px;margin-bottom:8px;line-height:1.3;}
 .hero p{font-size:13px;opacity:.75;font-style:italic;max-width:500px;margin:0 auto;line-height:1.6;}
 @media(min-width:600px){.hero h1{font-size:30px;}.hero p{font-size:15px;}}
-
-/* ── SECTION LABELS ── */
 .sec-label{background:var(--navy);color:#fff;font-size:11px;font-family:sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:6px 12px;border-radius:6px;display:inline-block;margin-bottom:12px;}
 .sec-title{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:6px;border-bottom:3px solid var(--blue);padding-bottom:6px;}
 .sec-desc{font-size:13px;color:var(--muted);font-style:italic;margin-bottom:16px;font-family:sans-serif;line-height:1.6;}
 @media(min-width:600px){.sec-title{font-size:24px;}}
-
-/* ── METRICS STRIP ── */
 .metrics-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;}
 @media(min-width:500px){.metrics-strip{grid-template-columns:repeat(3,1fr);}}
 @media(min-width:800px){.metrics-strip{grid-template-columns:repeat(5,1fr);}}
@@ -86,8 +56,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Georgia,serif;backg
 .mc-label{font-size:11px;color:var(--muted);font-family:sans-serif;margin-bottom:3px;}
 .mc-val{font-size:18px;font-weight:700;color:var(--navy);font-family:sans-serif;line-height:1.2;}
 .mc-sub{font-size:11px;color:var(--muted);font-family:sans-serif;margin-top:2px;}
-
-/* ── CARDS ── */
 .grid3{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:20px;}
 @media(min-width:750px){.grid3{grid-template-columns:repeat(3,1fr);}}
 .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
@@ -102,24 +70,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Georgia,serif;backg
 .b-blue{background:var(--pale);color:var(--blue);}
 .card-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px;}
 .card-sub{font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px;}
-
-/* ── METRIC ROWS ── */
 .mrow{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray);font-size:12px;font-family:sans-serif;gap:8px;}
 .mrow:last-child{border-bottom:none;}
 .mrow-label{color:var(--muted);flex:1;}
 .mrow-val{font-weight:700;text-align:right;flex-shrink:0;}
 .gt{color:var(--green);}.bt{color:var(--red);}.mt{color:var(--orange);}
-
-/* ── CALLOUTS ── */
 .callout{padding:12px 16px;border-radius:8px;border-left:4px solid;margin:14px 0;font-size:13px;line-height:1.7;font-family:sans-serif;}
 .c-info{background:var(--pale);border-color:var(--blue);color:#12335a;}
 .c-warn{background:var(--lgold);border-color:var(--gold);color:#4a3300;}
 .c-danger{background:var(--lred);border-color:var(--red);color:#5a0f1a;}
 .c-good{background:var(--lgreen);border-color:var(--green);color:#0d3d1e;}
-
-/* ── SCROLLABLE TABLE WRAPPER ── */
 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:16px;border-radius:8px;border:1px solid var(--border);}
-.tbl-hint{font-size:11px;color:var(--muted);font-family:sans-serif;margin-bottom:6px;display:flex;align-items:center;gap:4px;}
 table{width:100%;border-collapse:collapse;font-size:13px;font-family:sans-serif;}
 th{background:var(--navy);color:#fff;padding:10px 12px;text-align:left;font-weight:700;white-space:nowrap;}
 td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
@@ -127,24 +88,14 @@ tr:last-child td{border-bottom:none;}
 tr:nth-child(even) td{background:var(--off);}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .gc{color:var(--green);font-weight:700;}.bc{color:var(--red);font-weight:700;}.oc{color:var(--orange);font-weight:700;}
-
-/* ── WATERFALL CONTROLS ── */
 .ctrl-row{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
 @media(min-width:500px){.ctrl-row{flex-direction:row;align-items:center;}}
 .ctrl-label{font-size:13px;color:var(--muted);font-family:sans-serif;}
 .ctrl-val{font-size:20px;font-weight:700;color:var(--navy);font-family:sans-serif;min-width:60px;}
-input[type=range]{
-  flex:1;width:100%;accent-color:var(--navy);cursor:pointer;
-  height:6px;border-radius:3px;
-}
+input[type=range]{flex:1;width:100%;accent-color:var(--navy);cursor:pointer;height:6px;border-radius:3px;}
 .tog-row{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
 @media(min-width:500px){.tog-row{flex-direction:row;flex-wrap:wrap;}}
-.tog{
-  font-family:sans-serif;font-size:14px;padding:12px 16px;
-  border:1.5px solid var(--border);background:var(--white);border-radius:10px;
-  cursor:pointer;color:var(--muted);transition:all .15s;text-align:left;
-  min-height:48px;display:flex;align-items:center;flex:1;
-}
+.tog{font-family:sans-serif;font-size:14px;padding:12px 16px;border:1.5px solid var(--border);background:var(--white);border-radius:10px;cursor:pointer;color:var(--muted);transition:all .15s;text-align:left;min-height:48px;display:flex;align-items:center;flex:1;}
 @media(min-width:500px){.tog{min-width:160px;flex:unset;}}
 .tog.active{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:700;}
 .wf-chart-wrap{position:relative;width:100%;height:200px;margin:10px 0;}
@@ -155,8 +106,6 @@ input[type=range]{
 .wf-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px;}
 @media(min-width:500px){.wf-cards{grid-template-columns:repeat(3,1fr);}}
 @media(min-width:700px){.wf-cards{grid-template-columns:repeat(5,1fr);}}
-
-/* ── GOVERNANCE ── */
 .gov-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:16px;}
 @media(min-width:750px){.gov-grid{grid-template-columns:repeat(3,1fr);}}
 .seat-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-family:sans-serif;font-size:13px;}
@@ -166,8 +115,6 @@ input[type=range]{
 .dn{background:var(--navy);}.db{background:var(--blue);}
 .de{background:var(--gray);border:1px solid var(--border);color:var(--muted);}
 .seat-pct{color:var(--muted);font-size:11px;white-space:nowrap;}
-
-/* ── TIMELINE ── */
 .timeline{display:flex;position:relative;margin:12px 0 20px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
 .timeline::before{content:'';position:absolute;top:11px;left:20px;right:20px;height:2px;background:var(--border);}
 .tl-step{flex:0 0 120px;padding:0 8px;text-align:center;position:relative;}
@@ -175,8 +122,6 @@ input[type=range]{
 .tl-dot{width:22px;height:22px;border-radius:50%;margin:0 auto 8px;position:relative;z-index:1;border:3px solid var(--off);}
 .tl-year{font-size:12px;font-weight:700;color:var(--navy);font-family:sans-serif;margin-bottom:4px;}
 .tl-text{font-size:11px;color:var(--muted);line-height:1.5;font-family:sans-serif;}
-
-/* ── RECOMMENDATION ── */
 .rec-box{background:linear-gradient(135deg,#e8f5ee,#d4ede0);border:2px solid var(--green);border-radius:12px;padding:18px;margin:16px 0;}
 .rec-box h3{color:var(--green);font-size:17px;margin-bottom:10px;line-height:1.4;}
 .rec-box p{font-size:13px;color:#0d3d1e;line-height:1.8;margin-bottom:8px;}
@@ -186,17 +131,15 @@ input[type=range]{
 .final-box{margin-top:20px;padding:18px;background:var(--off);border-radius:10px;border:1px solid var(--border);}
 .final-box .fl{font-size:11px;font-family:sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
 .final-box p{font-size:14px;line-height:1.8;}
-
-/* ── DEEP ANALYSIS CARDS ── */
+.score-bar-wrap{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.score-bar-label{font-size:12px;font-family:sans-serif;min-width:60px;color:var(--muted);}
+.score-bar{height:10px;border-radius:5px;transition:width .4s;}
+.score-bar-val{font-size:13px;font-weight:700;font-family:sans-serif;min-width:36px;}
 .opt-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05);}
 .opt-card h2{font-size:18px;margin-bottom:4px;}
 .opt-card h3{font-size:15px;color:var(--blue);margin:14px 0 8px;}
 .opt-card p{font-size:13px;line-height:1.7;font-family:sans-serif;margin-bottom:10px;}
-
-/* ── FOOTER ── */
 footer{background:var(--navy);color:rgba(255,255,255,.45);text-align:center;padding:20px 16px;font-size:12px;font-family:sans-serif;margin-top:32px;}
-
-/* ── UTILS ── */
 p{line-height:1.8;margin-bottom:12px;}
 h2{font-size:18px;color:var(--navy);margin-bottom:6px;}
 h3{font-size:15px;color:var(--blue);margin-bottom:6px;}
@@ -208,14 +151,12 @@ strong{color:var(--navy);}
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="hdr">
   <div class="hdr-inner">
     <div>
       <div class="hdr-title">FiscoAI — Funding Analysis</div>
-      <div class="hdr-sub">Legal &amp; Financial Assessment · April 2026</div>
+      <div class="hdr-sub">Team 21 · Legal &amp; Financial Assessment · April 2026</div>
     </div>
-    <!-- Desktop nav -->
     <nav class="nav-desktop">
       <button class="nav-btn active" onclick="goPage('overview',this)">Overview</button>
       <button class="nav-btn" onclick="goPage('waterfall',this)">Waterfall</button>
@@ -224,14 +165,12 @@ strong{color:var(--navy);}
       <button class="nav-btn" onclick="goPage('realworld',this)">Cases</button>
       <button class="nav-btn" onclick="goPage('recommendation',this)">Verdict</button>
     </nav>
-    <!-- Hamburger -->
     <button class="hamburger" id="ham" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </div>
 
-<!-- Mobile drawer -->
 <div class="nav-overlay" id="overlay" onclick="closeMenu()"></div>
 <div class="nav-drawer" id="drawer">
   <a onclick="goPage('overview'); closeMenu();" class="active">Overview</a>
@@ -246,7 +185,7 @@ strong{color:var(--navy);}
 <div id="page-overview" class="page active">
   <div class="hero">
     <h1>FiscoAI — Three Paths to €10M</h1>
-    <p>Interactive legal &amp; financial analysis of the Series B Extension, Convertible Debt, and Venture Debt options</p>
+    <p>Interactive legal &amp; financial analysis · Series B Extension · Convertible Debt · Venture Debt</p>
   </div>
   <div class="container">
     <div class="sp"><span class="sec-label">Situation</span></div>
@@ -255,20 +194,20 @@ strong{color:var(--navy);}
     <div class="sp"><span class="sec-label">Current cap table</span></div>
     <div class="metrics-strip">
       <div class="mc"><div class="mc-label">Total shares</div><div class="mc-val">97,500</div><div class="mc-sub">Post-Series B</div></div>
-      <div class="mc"><div class="mc-label">Valuation</div><div class="mc-val">€45M</div><div class="mc-sub">Post-money (B)</div></div>
+      <div class="mc"><div class="mc-label">Post-money val.</div><div class="mc-val">€45M</div><div class="mc-sub">Series B reference</div></div>
       <div class="mc"><div class="mc-label">Price/share</div><div class="mc-val">€461.54</div><div class="mc-sub">€45M ÷ 97,500</div></div>
       <div class="mc"><div class="mc-label">Board seats</div><div class="mc-val">5</div><div class="mc-sub">Majority = 3/5</div></div>
-      <div class="mc"><div class="mc-label">Runway</div><div class="mc-val">5 months</div><div class="mc-sub">Current</div></div>
+      <div class="mc"><div class="mc-label">Cash runway</div><div class="mc-val">5 months</div><div class="mc-sub">Current position</div></div>
     </div>
 
     <div class="tbl-wrap">
       <table>
         <thead><tr><th>Shareholder</th><th>Shares</th><th>%</th><th>Class</th></tr></thead>
         <tbody>
-          <tr><td>Founders</td><td class="num">10,000</td><td class="num">10.25%</td><td>Common</td></tr>
-          <tr><td>Seed Investor</td><td class="num">10,000</td><td class="num">10.25%</td><td>Preferred seed · 8 yrs ⚠</td></tr>
+          <tr><td>Founders</td><td class="num">10,000</td><td class="num">10.26%</td><td>Common</td></tr>
+          <tr><td>Seed Investor</td><td class="num">10,000</td><td class="num">10.26%</td><td>Preferred seed · 8 yrs ⚠</td></tr>
           <tr><td>Series A</td><td class="num">45,000</td><td class="num">46.15%</td><td>Preferred A · 5 yrs ⚠</td></tr>
-          <tr><td>Series B</td><td class="num">32,500</td><td class="num">33.35%</td><td>Preferred B · 1× LP</td></tr>
+          <tr><td>Series B</td><td class="num">32,500</td><td class="num">33.33%</td><td>Preferred B · 1× LP on €15M</td></tr>
           <tr><td><strong>Total</strong></td><td class="num"><strong>97,500</strong></td><td class="num"><strong>100%</strong></td><td>—</td></tr>
         </tbody>
       </table>
@@ -277,46 +216,49 @@ strong{color:var(--navy);}
     <div class="sp"><span class="sec-label">Three options at a glance</span></div>
     <div class="grid3">
       <div class="card danger">
-        <span class="badge b-red">Not recommended</span>
+        <span class="badge b-red">Not recommended · Score 1.75/5</span>
         <div class="card-title">Option 1 — Series B Extension</div>
         <div class="card-sub">Existing investor · Participating preferred equity</div>
-        <div class="mrow"><span class="mrow-label">Capital at closing</span><span class="mrow-val bt">€5M certain</span></div>
-        <div class="mrow"><span class="mrow-label">Remaining €5M</span><span class="mrow-val bt">Milestone-gated</span></div>
+        <div class="mrow"><span class="mrow-label">Capital at closing</span><span class="mrow-val bt">€5M certain only</span></div>
+        <div class="mrow"><span class="mrow-label">Remaining €5M</span><span class="mrow-val bt">Milestone-gated (12M)</span></div>
         <div class="mrow"><span class="mrow-label">Immediate dilution</span><span class="mrow-val bt">~18%</span></div>
         <div class="mrow"><span class="mrow-label">Liquidation pref.</span><span class="mrow-val bt">2× participating</span></div>
         <div class="mrow"><span class="mrow-label">Anti-dilution</span><span class="mrow-val bt">Full ratchet</span></div>
-        <div class="mrow"><span class="mrow-label">Board seat</span><span class="mrow-val bt">Yes — 2/6</span></div>
-        <div class="mrow"><span class="mrow-label">Veto rights</span><span class="mrow-val bt">5 categories</span></div>
+        <div class="mrow"><span class="mrow-label">New board seat</span><span class="mrow-val bt">Yes — Series B 2/6</span></div>
+        <div class="mrow"><span class="mrow-label">Veto rights</span><span class="mrow-val bt">5 reserved categories</span></div>
         <div class="mrow"><span class="mrow-label">Series C readiness</span><span class="mrow-val bt">Impaired</span></div>
+        <div class="mrow"><span class="mrow-label">Founders @ €45M exit</span><span class="mrow-val bt">€0.84M (1.87%)</span></div>
       </div>
       <div class="card featured good">
-        <span class="badge b-green">Recommended</span>
+        <span class="badge b-green">Recommended · Score 4.55/5</span>
         <div class="card-title">Option 2 — Convertible Debt</div>
         <div class="card-sub">StarFund (UK) · 8% PIK · 3-year maturity</div>
-        <div class="mrow"><span class="mrow-label">Capital at closing</span><span class="mrow-val gt">€10M committed</span></div>
+        <div class="mrow"><span class="mrow-label">Capital at closing</span><span class="mrow-val gt">€10M fully committed</span></div>
         <div class="mrow"><span class="mrow-label">Milestones</span><span class="mrow-val gt">None</span></div>
         <div class="mrow"><span class="mrow-label">Immediate dilution</span><span class="mrow-val gt">None — deferred</span></div>
-        <div class="mrow"><span class="mrow-label">Liquidation pref.</span><span class="mrow-val mt">1.5× at maturity</span></div>
+        <div class="mrow"><span class="mrow-label">Liquidation pref.</span><span class="mrow-val mt">1.5× at maturity only</span></div>
         <div class="mrow"><span class="mrow-label">Anti-dilution</span><span class="mrow-val gt">None</span></div>
-        <div class="mrow"><span class="mrow-label">Board seat</span><span class="mrow-val gt">Post-conversion only</span></div>
+        <div class="mrow"><span class="mrow-label">New board seat</span><span class="mrow-val gt">Post-conversion only</span></div>
         <div class="mrow"><span class="mrow-label">Veto rights</span><span class="mrow-val gt">None pre-conversion</span></div>
         <div class="mrow"><span class="mrow-label">Series C readiness</span><span class="mrow-val gt">Good</span></div>
+        <div class="mrow"><span class="mrow-label">Founders @ €45M exit</span><span class="mrow-val gt">€0.87M (1.93%)</span></div>
       </div>
       <div class="card warn">
-        <span class="badge b-orange">Conditional</span>
+        <span class="badge b-orange">Conditional · Score 3.30/5</span>
         <div class="card-title">Option 3 — Venture Debt</div>
         <div class="card-sub">VNTR (France) · 12% p.a. · 5-year maturity</div>
         <div class="mrow"><span class="mrow-label">Capital at closing</span><span class="mrow-val mt">€8M certain</span></div>
         <div class="mrow"><span class="mrow-label">Remaining €4M</span><span class="mrow-val bt">24-month milestones</span></div>
-        <div class="mrow"><span class="mrow-label">Immediate dilution</span><span class="mrow-val gt">~2% (warrants)</span></div>
+        <div class="mrow"><span class="mrow-label">Immediate dilution</span><span class="mrow-val gt">~2% (warrants only)</span></div>
         <div class="mrow"><span class="mrow-label">Annual cash cost</span><span class="mrow-val bt">€960K–€1.44M/yr</span></div>
-        <div class="mrow"><span class="mrow-label">IP collateral</span><span class="mrow-val bt">Core IP pledged</span></div>
-        <div class="mrow"><span class="mrow-label">Board seat</span><span class="mrow-val gt">None</span></div>
+        <div class="mrow"><span class="mrow-label">IP collateral</span><span class="mrow-val bt">Core IP pledged ⚠</span></div>
+        <div class="mrow"><span class="mrow-label">New board seat</span><span class="mrow-val gt">None</span></div>
         <div class="mrow"><span class="mrow-label">Veto rights</span><span class="mrow-val mt">Covenants only</span></div>
         <div class="mrow"><span class="mrow-label">Series C readiness</span><span class="mrow-val mt">Conditional</span></div>
+        <div class="mrow"><span class="mrow-label">Founders @ €45M exit</span><span class="mrow-val gt">€1.85M (4.11%) — highest</span></div>
       </div>
     </div>
-    <div class="callout c-info"><strong>Tap the menu</strong> to explore the interactive waterfall calculator, governance comparison, deep-dive analysis, real-world case studies, and the final recommendation.</div>
+    <div class="callout c-info"><strong>Tap the menu</strong> to explore the interactive waterfall calculator, governance comparison, deep-dive analysis, real-world case studies, and the final recommendation with scoring matrix.</div>
   </div>
 </div>
 
@@ -324,7 +266,7 @@ strong{color:var(--navy);}
 <div id="page-waterfall" class="page">
   <div class="container">
     <div class="sec-title">Waterfall Calculator</div>
-    <div class="sec-desc">Drag the slider to any exit value to see how proceeds distribute in real time.</div>
+    <div class="sec-desc">Drag the slider to any exit value to see how proceeds distribute in real time. Formulae replicate the Excel model exactly at all key scenarios (€20M, €45M, €80M).</div>
     <div class="ctrl-row">
       <span class="ctrl-label">Exit valuation</span>
       <input type="range" id="exitSlider" min="10" max="120" value="45" step="1" oninput="updateWF()">
@@ -340,6 +282,25 @@ strong{color:var(--navy);}
     <div class="wf-chart-wrap"><canvas id="wfChart" role="img" aria-label="Waterfall distribution chart"></canvas></div>
     <div id="wf-table" style="margin-top:16px;"></div>
     <div id="wf-note" class="callout c-warn" style="margin-top:12px;"></div>
+
+    <div class="sp"><span class="sec-label">Methodology — how the waterfall works</span></div>
+    <div class="opt-card">
+      <h3>Option 1 priority order</h3>
+      <p><strong>Tier 1:</strong> Series B original 1× preference = MIN(exit, €15M)<br>
+      <strong>Tier 2:</strong> Series B extension 2× preference = MIN(remaining, €20M)<br>
+      <strong>Tier 3:</strong> Residual split pro-rata across 119,167 total shares — Series B also participates (54,167 shares)</p>
+      <p>New shares: €10M ÷ €461.54 = 21,667. Total pool: 97,500 + 21,667 = <strong>119,167 shares</strong>.</p>
+      <h3>Option 2 priority order</h3>
+      <p><strong>Tier 1:</strong> StarFund 1.5× LP on €12.4M maturity balance = <strong>€18.6M</strong> senior claim<br>
+      <strong>Tier 2:</strong> Series B 1× preference = MIN(remaining, €15M)<br>
+      <strong>Tier 3:</strong> Residual pro-rata across 131,083 shares</p>
+      <p>PIK accrual: €10M + (€10M × 8% × 3yr) = €12.4M. Conversion price: €461.54 × 0.80 = €369.23/share. New shares: €12.4M ÷ €369.23 = <strong>33,583</strong>. Total: <strong>131,083 shares</strong>.</p>
+      <h3>Option 3 priority order</h3>
+      <p><strong>Tier 1:</strong> VNTR senior debt recovery = MIN(exit, €12M)<br>
+      <strong>Tier 2:</strong> Series B 1× preference = MIN(remaining, €15M)<br>
+      <strong>Tier 3:</strong> Residual pro-rata across <strong>97,500 shares</strong> (pre-warrant equity base)</p>
+      <p>Warrants: 1% × 97,500 × 2 tranches = 1,950 shares at €461.54 exercise price. VNTR's waterfall claim is the €12M debt only — warrants are modelled separately as equity upside if exercised. Pro-rata uses the 97,500 pre-warrant share count, consistent with the Excel model.</p>
+    </div>
   </div>
 </div>
 
@@ -351,21 +312,21 @@ strong{color:var(--navy);}
     <div class="sp"><span class="sec-label">Board composition</span></div>
     <div class="gov-grid">
       <div class="card danger">
-        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:12px;font-family:sans-serif;">Option 1 — 6 seats</div>
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:12px;font-family:sans-serif;">Option 1 — 6 seats post-closing</div>
         <div class="seat-row"><span class="seat-party">Founders</span><span class="seat-dots"><span class="sdot dn">F</span><span class="sdot dn">F</span></span><span class="seat-pct">2/6 · 33%</span></div>
         <div class="seat-row"><span class="seat-party">Seed</span><span class="seat-dots"><span class="sdot db">S</span></span><span class="seat-pct">1/6 · 17%</span></div>
         <div class="seat-row"><span class="seat-party">Series A</span><span class="seat-dots"><span class="sdot db">A</span></span><span class="seat-pct">1/6 · 17%</span></div>
         <div class="seat-row"><span class="seat-party">Series B</span><span class="seat-dots"><span class="sdot dn">B</span><span class="sdot" style="background:#c0392b;">B+</span></span><span class="seat-pct">2/6 · 33% ↑</span></div>
-        <div class="callout c-danger" style="margin-top:10px;padding:8px 12px;font-size:12px;">Series B gains second seat + 5-category veto including future capital raises.</div>
+        <div class="callout c-danger" style="margin-top:10px;padding:8px 12px;font-size:12px;">Series B gains a second seat and holds veto over 5 reserved matters including all future capital raises — blocking any Series C without consent.</div>
       </div>
       <div class="card good featured">
-        <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:12px;font-family:sans-serif;">Option 2 — 5 seats (unchanged)</div>
+        <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:12px;font-family:sans-serif;">Option 2 — 5 seats (unchanged at signing)</div>
         <div class="seat-row"><span class="seat-party">Founders</span><span class="seat-dots"><span class="sdot dn">F</span><span class="sdot dn">F</span></span><span class="seat-pct">2/5 · 40%</span></div>
         <div class="seat-row"><span class="seat-party">Seed</span><span class="seat-dots"><span class="sdot db">S</span></span><span class="seat-pct">1/5 · 20%</span></div>
         <div class="seat-row"><span class="seat-party">Series A</span><span class="seat-dots"><span class="sdot db">A</span></span><span class="seat-pct">1/5 · 20%</span></div>
         <div class="seat-row"><span class="seat-party">Series B</span><span class="seat-dots"><span class="sdot dn">B</span></span><span class="seat-pct">1/5 · 20%</span></div>
-        <div class="seat-row"><span class="seat-party">StarFund</span><span class="seat-dots"><span class="sdot de">—</span></span><span class="seat-pct">0 until conversion</span></div>
-        <div class="callout c-good" style="margin-top:10px;padding:8px 12px;font-size:12px;">No governance change at signing. Full management autonomy preserved.</div>
+        <div class="seat-row"><span class="seat-party">StarFund</span><span class="seat-dots"><span class="sdot de">—</span></span><span class="seat-pct">0 seats until conversion</span></div>
+        <div class="callout c-good" style="margin-top:10px;padding:8px 12px;font-size:12px;">No governance change at signing. Full management autonomy throughout the turnaround. StarFund gains 1 seat only on conversion.</div>
       </div>
       <div class="card warn">
         <div style="font-size:13px;font-weight:700;color:var(--orange);margin-bottom:12px;font-family:sans-serif;">Option 3 — 5 seats (unchanged)</div>
@@ -373,28 +334,28 @@ strong{color:var(--navy);}
         <div class="seat-row"><span class="seat-party">Seed</span><span class="seat-dots"><span class="sdot db">S</span></span><span class="seat-pct">1/5 · 20%</span></div>
         <div class="seat-row"><span class="seat-party">Series A</span><span class="seat-dots"><span class="sdot db">A</span></span><span class="seat-pct">1/5 · 20%</span></div>
         <div class="seat-row"><span class="seat-party">Series B</span><span class="seat-dots"><span class="sdot dn">B</span></span><span class="seat-pct">1/5 · 20%</span></div>
-        <div class="seat-row"><span class="seat-party">VNTR</span><span class="seat-dots"><span class="sdot de">—</span></span><span class="seat-pct">No seat</span></div>
-        <div class="callout c-warn" style="margin-top:10px;padding:8px 12px;font-size:12px;">No board rights, but €500k debt cap and €1.5M cash floor covenants apply.</div>
+        <div class="seat-row"><span class="seat-party">VNTR</span><span class="seat-dots"><span class="sdot de">—</span></span><span class="seat-pct">No board seat</span></div>
+        <div class="callout c-warn" style="margin-top:10px;padding:8px 12px;font-size:12px;">No formal board rights. However €500k new debt cap and €1.5M minimum cash covenants constrain treasury management operationally.</div>
       </div>
     </div>
-    <div class="sp"><span class="sec-label">Veto &amp; control rights</span></div>
+    <div class="sp"><span class="sec-label">Veto &amp; control rights matrix</span></div>
     <div class="tbl-wrap">
       <table>
         <thead><tr><th>Reserved matter</th><th>Option 1</th><th>Option 2</th><th>Option 3</th></tr></thead>
         <tbody>
-          <tr><td>Capital increases / new equity</td><td class="bc">Veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
-          <tr><td>M&amp;A / sale / IPO</td><td class="bc">Veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
-          <tr><td>New debt</td><td class="bc">Veto</td><td class="gc">Free</td><td class="oc">€500k cap</td></tr>
-          <tr><td>Mgmt compensation</td><td class="bc">Veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
-          <tr><td>Strategic partnerships</td><td class="bc">Veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
-          <tr><td>Min. cash covenant</td><td class="gc">None</td><td class="gc">None</td><td class="oc">€1.5M floor</td></tr>
-          <tr><td>Founder forfeiture</td><td class="bc">Yes</td><td class="gc">No</td><td class="gc">No</td></tr>
-          <tr><td>Lock-up</td><td class="bc">4 yrs all</td><td class="oc">3 yrs founders</td><td class="gc">None</td></tr>
-          <tr><td>Drag-along</td><td class="bc">75% preferred</td><td class="gc">None</td><td class="gc">None</td></tr>
+          <tr><td>Capital increases / new equity</td><td class="bc">Series B veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
+          <tr><td>M&amp;A / company sale / IPO</td><td class="bc">Series B veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
+          <tr><td>New debt instruments</td><td class="bc">Series B veto</td><td class="gc">Free</td><td class="oc">€500k cap (covenant)</td></tr>
+          <tr><td>Management compensation</td><td class="bc">Series B veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
+          <tr><td>Strategic partnerships</td><td class="bc">Series B veto</td><td class="gc">Free</td><td class="gc">Free</td></tr>
+          <tr><td>Minimum cash requirement</td><td class="gc">None</td><td class="gc">None</td><td class="oc">€1.5M floor always</td></tr>
+          <tr><td>Founder share forfeiture</td><td class="bc">Yes — to Series B</td><td class="gc">No</td><td class="gc">No</td></tr>
+          <tr><td>Lock-up</td><td class="bc">4 years — all shareholders</td><td class="oc">3 years — founders only</td><td class="gc">None specified</td></tr>
+          <tr><td>Drag-along trigger</td><td class="bc">75% of preferred shareholders</td><td class="gc">None</td><td class="gc">None</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="callout c-danger"><strong>Critical — Option 1:</strong> The veto over capital increases means every future financing round, including a Series C, requires the Series B investor's written consent. This is the most damaging provision from a future fundraising perspective.</div>
+    <div class="callout c-danger"><strong>Critical — Option 1:</strong> The veto over capital increases means every future financing round requires Series B's written consent. This is an outlier provision — none of the 12 European fintech comparables in our peer analysis contained a veto right over future capital raises. A formal waiver will be required before any Series C investor engages.</div>
   </div>
 </div>
 
@@ -402,89 +363,155 @@ strong{color:var(--navy);}
 <div id="page-analysis" class="page">
   <div class="container">
     <div class="sec-title">Option-by-Option Analysis</div>
-    <div class="sec-desc">Financial mechanics, legal obligations, and stakeholder profiles.</div>
+    <div class="sec-desc">Financial mechanics, legal obligations, and stakeholder profiles. All numbers from the Excel model.</div>
 
     <div class="opt-card" style="border-top:4px solid var(--red);">
       <h2 style="color:var(--red);">Option 1 — Series B Extension</h2>
-      <p style="font-size:12px;color:var(--muted);font-style:italic;">Existing investor · €10M in two tranches · 2× participating preferred · Full ratchet</p>
+      <p style="font-size:12px;color:var(--muted);font-style:italic;">Existing investor · €10M in two tranches · 2× participating preferred · Full ratchet anti-dilution</p>
       <h3>Full ratchet anti-dilution</h3>
-      <p>The most aggressive anti-dilution available. If FiscoAI raises a future round below €461.54/share, the Series B Extension price resets to that lower price — regardless of volume. The company must issue free shares to the investor, diluting everyone else.</p>
-      <div class="callout c-danger">Example: Series C at €300/share → Series B Extension investor's price retroactively resets from €461.54 to €300. Free shares issued at the expense of founders and early investors.</div>
-      <h3>Waterfall at €45M exit</h3>
+      <p>The most aggressive anti-dilution available. If FiscoAI raises a future round below €461.54/share, the Series B Extension price resets to that lower price — regardless of volume. The company must issue free shares to the investor, diluting everyone else. This provision appears in fewer than 15% of comparable European VC transactions.</p>
+      <div class="callout c-danger">Example: Series C at €300/share → Series B Extension investor's price retroactively resets from €461.54 to €300. Free shares issued at the expense of founders and early investors. A weighted-average ratchet (market standard in 85%+ of EU deals) would have distributed this burden far more equitably.</div>
+      <h3>Waterfall at €45M exit — from Excel model</h3>
       <div class="tbl-wrap">
         <table>
-          <thead><tr><th>Stakeholder</th><th>Proceeds</th><th>% of exit</th></tr></thead>
+          <thead><tr><th>Stakeholder</th><th>Proceeds</th><th>% of exit</th><th>Basis</th></tr></thead>
           <tbody>
-            <tr><td>Founders</td><td class="num">€0.68M</td><td class="num bc">1.5%</td></tr>
-            <tr><td>Seed</td><td class="num">€0.68M</td><td class="num bc">1.5%</td></tr>
-            <tr><td>Series A</td><td class="num">€3.08M</td><td class="num oc">6.8%</td></tr>
-            <tr><td>Series B (all)</td><td class="num">€40.56M</td><td class="num bc">90.1%</td></tr>
+            <tr><td>Founders</td><td class="num">€0.84M</td><td class="num bc">1.87%</td><td>Common pro-rata on €10M residual</td></tr>
+            <tr><td>Seed Investor</td><td class="num">€0.84M</td><td class="num bc">1.87%</td><td>Common pro-rata</td></tr>
+            <tr><td>Series A</td><td class="num">€3.78M</td><td class="num oc">8.40%</td><td>Common pro-rata</td></tr>
+            <tr><td>Series B (all)</td><td class="num bc">€39.55M</td><td class="num bc">87.89%</td><td>1× (€15M) + 2× (€20M) + participation (€4.55M)</td></tr>
+            <tr><td><strong>TOTAL</strong></td><td class="num"><strong>€45.00M</strong></td><td class="num"><strong>100%</strong></td><td>—</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="callout c-danger">At a €45M exit (the current valuation), the Series B investor captures 90.1% of all proceeds. Founders receive €0.68M on a 10.25% stake.</div>
+      <div class="callout c-danger">Series B captures <strong>87.9%</strong> of all proceeds at current valuation via 1× original preference (€15M) + 2× extension preference (€20M) + pro-rata participation on the remaining €10M (€4.55M). Founders receive €0.84M on a 10.26% equity stake.</div>
     </div>
 
     <div class="opt-card" style="border-top:4px solid var(--green);">
       <h2 style="color:var(--green);">Option 2 — Convertible Debt (StarFund)</h2>
-      <p style="font-size:12px;color:var(--muted);font-style:italic;">StarFund (UK) · €10M · 8% PIK · 3-year maturity · 20% conversion discount</p>
-      <h3>PIK interest accrual</h3>
+      <p style="font-size:12px;color:var(--muted);font-style:italic;">StarFund (UK) · €10M · 8% PIK · 3-year maturity · 20% conversion discount at market median</p>
+      <h3>PIK interest accrual (simple interest on principal — not compounded)</h3>
       <div class="tbl-wrap">
         <table>
-          <thead><tr><th>Year</th><th>Annual interest</th><th>Total balance</th></tr></thead>
+          <thead><tr><th>Year</th><th>Opening balance</th><th>Annual PIK interest</th><th>Closing balance</th></tr></thead>
           <tbody>
-            <tr><td>1</td><td class="num">€800,000</td><td class="num">€10,800,000</td></tr>
-            <tr><td>2</td><td class="num">€800,000</td><td class="num">€11,600,000</td></tr>
-            <tr><td>3 (maturity)</td><td class="num">€800,000</td><td class="num"><strong>€12,400,000</strong></td></tr>
+            <tr><td>1</td><td class="num">€10,000,000</td><td class="num">€800,000</td><td class="num">€10,800,000</td></tr>
+            <tr><td>2</td><td class="num">€10,800,000</td><td class="num">€800,000</td><td class="num">€11,600,000</td></tr>
+            <tr><td>3 (maturity)</td><td class="num">€11,600,000</td><td class="num">€800,000</td><td class="num"><strong>€12,400,000</strong></td></tr>
           </tbody>
         </table>
       </div>
-      <h3>Conversion scenarios</h3>
+      <h3>Conversion scenarios — from Excel Debt Schedule sheet</h3>
       <div class="tbl-wrap">
         <table>
-          <thead><tr><th>Trigger</th><th>Price</th><th>StarFund %</th></tr></thead>
+          <thead><tr><th>Trigger</th><th>Conversion price</th><th>New shares</th><th>StarFund %</th><th>Preference</th></tr></thead>
           <tbody>
-            <tr><td>Maturity</td><td>€369.23</td><td class="oc">~25.6%</td></tr>
-            <tr><td>Series C €40M pre</td><td>~€400</td><td class="oc">~24.1%</td></tr>
-            <tr><td>Series C €60M pre</td><td>~€480</td><td class="gc">~20.9%</td></tr>
-            <tr><td>IPO</td><td>IPO price</td><td class="gc">Minimised</td></tr>
+            <tr><td>Maturity (Year 3)</td><td>€369.23 (80% × €461.54)</td><td class="num">33,583</td><td class="oc">25.6%</td><td>1.5× on €12.4M</td></tr>
+            <tr><td>Series C @ €40M pre</td><td>~€328</td><td class="num">37,781</td><td class="oc">27.9%</td><td>Pari passu</td></tr>
+            <tr><td>Series C @ €60M pre</td><td>~€492</td><td class="num">25,188</td><td class="gc">20.5%</td><td>Pari passu</td></tr>
+            <tr><td>Series C @ €80M pre</td><td>~€656</td><td class="num">18,891</td><td class="gc">16.2%</td><td>Pari passu</td></tr>
+            <tr><td>IPO</td><td>IPO price (no discount)</td><td class="num">~12,090</td><td class="gc">11.0%</td><td>None</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="callout c-warn"><strong>Most senior class escalation:</strong> StarFund's converted shares automatically adopt the rights of the most senior class at conversion. If Series C investors negotiate a 1.5× preference, StarFund inherits the same rights automatically. This must be capped in negotiations.</div>
+      <div class="callout c-warn"><strong>Most senior class escalation:</strong> StarFund's converted shares automatically adopt the rights of the most senior class at conversion — including terms negotiated by future Series C investors. This free-rider problem must be capped in negotiations (Amendment 2).</div>
+      <h3>Waterfall at €45M exit — from Excel model</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Stakeholder</th><th>Proceeds</th><th>% of exit</th></tr></thead>
+          <tbody>
+            <tr><td>Founders</td><td class="num gc">€0.87M</td><td class="num gc">1.93%</td></tr>
+            <tr><td>Seed Investor</td><td class="num gc">€0.87M</td><td class="num gc">1.93%</td></tr>
+            <tr><td>Series A</td><td class="num gc">€3.91M</td><td class="num gc">8.69%</td></tr>
+            <tr><td>Series B</td><td class="num">€17.83M</td><td class="num">39.62%</td></tr>
+            <tr><td>StarFund</td><td class="num">€21.52M</td><td class="num">47.82%</td></tr>
+            <tr><td><strong>TOTAL</strong></td><td class="num"><strong>€45.00M</strong></td><td class="num"><strong>100%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-good">Founders receive <strong>€0.87M</strong> — more than Option 1's €0.84M. At higher exits the gap widens significantly. Sensitivity analysis (Recommendation sheet) shows Option 2 outperforms Option 1 for founders at all exit values.</div>
+      <h3>Waterfall at €80M exit — from Excel model</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Stakeholder</th><th>Proceeds</th><th>% of exit</th></tr></thead>
+          <tbody>
+            <tr><td>Founders</td><td class="num">€3.54M</td><td class="num">4.42%</td></tr>
+            <tr><td>Seed Investor</td><td class="num">€3.54M</td><td class="num">4.42%</td></tr>
+            <tr><td>Series A</td><td class="num">€15.93M</td><td class="num">19.91%</td></tr>
+            <tr><td>Series B</td><td class="num">€26.50M</td><td class="num">33.13%</td></tr>
+            <tr><td>StarFund</td><td class="num">€30.49M</td><td class="num">38.11%</td></tr>
+            <tr><td><strong>TOTAL</strong></td><td class="num"><strong>€80.00M</strong></td><td class="num"><strong>100%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div class="opt-card" style="border-top:4px solid var(--orange);">
       <h2 style="color:var(--orange);">Option 3 — Venture Debt (VNTR)</h2>
-      <p style="font-size:12px;color:var(--muted);font-style:italic;">VNTR (France) · Up to €12M · 12% p.a. cash · 5-year bullet · IP collateral</p>
-      <h3>Total cost of borrowing</h3>
+      <p style="font-size:12px;color:var(--muted);font-style:italic;">VNTR (France) · Up to €12M · 12% p.a. cash · 5-year bullet · Core IP pledged as collateral</p>
+      <h3>5-year debt service schedule — from Excel model</h3>
       <div class="tbl-wrap">
         <table>
-          <thead><tr><th>Year</th><th>Annual interest</th><th>Cumulative cost</th></tr></thead>
+          <thead><tr><th>Year</th><th>Principal outstanding</th><th>Annual cash interest</th><th>Cumulative interest</th></tr></thead>
           <tbody>
-            <tr><td>1</td><td class="num">€960,000</td><td class="num">€960,000</td></tr>
-            <tr><td>2</td><td class="num">€960,000</td><td class="num">€1,920,000</td></tr>
-            <tr><td>3</td><td class="num">€1,440,000</td><td class="num">€3,360,000</td></tr>
-            <tr><td>4</td><td class="num">€1,440,000</td><td class="num">€4,800,000</td></tr>
-            <tr><td>5 + principal</td><td class="num">€1,440,000 + €12M</td><td class="num"><strong>€18,240,000</strong></td></tr>
+            <tr><td>1</td><td class="num">€8M (T1)</td><td class="num bc">€960,000</td><td class="num">€960,000</td></tr>
+            <tr><td>2</td><td class="num">€8M (T1)</td><td class="num bc">€960,000</td><td class="num">€1,920,000</td></tr>
+            <tr><td>3</td><td class="num">€12M (T1+T2)</td><td class="num bc">€1,440,000</td><td class="num">€3,360,000</td></tr>
+            <tr><td>4</td><td class="num">€12M</td><td class="num bc">€1,440,000</td><td class="num">€4,800,000</td></tr>
+            <tr><td>5 + principal</td><td class="num">—</td><td class="num bc">€0 + €12M bullet</td><td class="num bc"><strong>€16,800,000 total</strong></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="callout c-danger"><strong>IP collateral is the decisive risk:</strong> FiscoAI's core technology is pledged as collateral. A single missed interest payment, cash below €1.5M, or unauthorised debt above €500k gives VNTR the right to seize the IP. This existential risk does not exist under Options 1 or 2.</div>
+      <div class="callout c-danger"><strong>Total 5-year cost: €16.8M on a €12M facility</strong> (€4.8M interest + €12M principal) — a 40% total cost of borrowing. The 12% rate is at the 75th percentile of peer comparables, above the market median of 11%. Annual interest of €960K–€1.44M competes directly with the €10M growth investment.</div>
+      <h3>Warrant coverage</h3>
+      <p>1% of fully diluted shares per tranche × 2 tranches = <strong>1,950 warrants</strong> at €461.54/share. Total dilution ~2% — minimal vs. 18% (Option 1) or 25.6% (Option 2 at maturity).</p>
+      <h3>Waterfall at €45M exit — from Excel model</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Stakeholder</th><th>Proceeds</th><th>% of exit</th></tr></thead>
+          <tbody>
+            <tr><td>Founders</td><td class="num gc"><strong>€1.85M</strong></td><td class="num gc"><strong>4.11%</strong></td></tr>
+            <tr><td>Seed Investor</td><td class="num gc">€1.85M</td><td class="num gc">4.11%</td></tr>
+            <tr><td>Series A</td><td class="num gc">€8.31M</td><td class="num gc">18.47%</td></tr>
+            <tr><td>Series B</td><td class="num">€21.00M</td><td class="num">46.67%</td></tr>
+            <tr><td>VNTR (debt recovery)</td><td class="num">€12.00M</td><td class="num">26.67%</td></tr>
+            <tr><td><strong>TOTAL</strong></td><td class="num"><strong>€45.00M</strong></td><td class="num"><strong>100%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-warn">Founders receive <strong>€1.85M</strong> at €45M — the highest of all three options. However this assumes 5 years of successful debt service without covenant breach. The IP pledge is existential: any missed payment, cash below €1.5M, or unauthorised debt above €500k gives VNTR the right to seize the core technology asset.</div>
     </div>
 
-    <div class="sp"><span class="sec-label">Stakeholder analysis — Option 2</span></div>
+    <div class="sp"><span class="sec-label">Stakeholder summary — all three options at €45M exit</span></div>
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>Stakeholder</th><th>Verdict</th><th>Key point</th></tr></thead>
+        <thead><tr><th>Stakeholder</th><th>Option 1</th><th>Option 2</th><th>Option 3</th><th>Verdict</th></tr></thead>
         <tbody>
-          <tr><td><strong>Founders</strong></td><td class="gc">✓ Best positioned</td><td>No dilution, full autonomy, softer lock-up, €1.34M at €45M exit (vs €0.68M under Opt.1)</td></tr>
-          <tr><td><strong>Seed</strong></td><td class="gc">✓ Improved</td><td>Proportional interest preserved. €1.34M at €45M exit. 3-yr maturity aligns with fund term pressure.</td></tr>
-          <tr><td><strong>Series A</strong></td><td class="gc">✓ Substantially better</td><td>No full ratchet, no 2× preference, no veto. €6.04M at €45M exit (vs €3.08M under Opt.1)</td></tr>
-          <tr><td><strong>StarFund</strong></td><td class="b-blue" style="white-space:nowrap;">✓ Protected</td><td>Senior debt claim + PIK accretion + 20% discount + dynamic senior class protection.</td></tr>
+          <tr><td><strong>Founders</strong></td><td class="num bc">€0.84M</td><td class="num oc">€0.87M</td><td class="num gc">€1.85M</td><td>Opt.3 best economically but IP risk makes Opt.2 the recommendation</td></tr>
+          <tr><td><strong>Seed Investor</strong></td><td class="num bc">€0.84M</td><td class="num oc">€0.87M</td><td class="num gc">€1.85M</td><td>Same as founders. 3yr maturity in Opt.2 aligns with fund term pressure.</td></tr>
+          <tr><td><strong>Series A</strong></td><td class="num bc">€3.78M</td><td class="num oc">€3.91M</td><td class="num gc">€8.31M</td><td>Opt.2 avoids full ratchet dilution. Opt.3 best but conditioned on debt service.</td></tr>
+          <tr><td><strong>Series B</strong></td><td class="num gc">€39.55M</td><td class="num oc">€17.83M</td><td class="num oc">€21.00M</td><td>Opt.1 vastly superior for Series B — extractive at the expense of all others.</td></tr>
+          <tr><td><strong>New investor</strong></td><td class="num">—</td><td class="num">€21.52M</td><td class="num">€12.00M</td><td>StarFund well-protected via senior claim + participation. VNTR recovers debt only.</td></tr>
         </tbody>
       </table>
     </div>
+    <p style="font-size:11px;color:var(--muted);font-style:italic;margin-top:-10px;">All figures at €45M exit. Source: Team 21 Excel model, Waterfall sheet.</p>
+
+    <div class="sp"><span class="sec-label">Peer benchmarking — 12 European fintech comparables (2020–2025)</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Metric</th><th>Median</th><th>75th pctile</th><th>Max</th><th>FiscoAI term</th><th>Assessment</th></tr></thead>
+        <tbody>
+          <tr><td>Conversion discount</td><td class="num">20%</td><td class="num">20%</td><td class="num">20%</td><td class="num gc">20% (Opt.2)</td><td class="gc">At market median ✓</td></tr>
+          <tr><td>PIK interest rate</td><td class="num">8%</td><td class="num">9%</td><td class="num">10%</td><td class="num gc">8% (Opt.2)</td><td class="gc">At market median ✓</td></tr>
+          <tr><td>Venture debt rate</td><td class="num">11%</td><td class="num">12%</td><td class="num">14%</td><td class="num oc">12% (Opt.3)</td><td class="oc">75th percentile — above median ↑</td></tr>
+          <tr><td>Liquidation preference</td><td class="num">1.0×</td><td class="num">1.5×</td><td class="num">2.0×</td><td class="num bc">2.0× (Opt.1 ext.)</td><td class="bc">Top of range — rare outlier ✗</td></tr>
+          <tr><td>Full ratchet anti-dilution</td><td colspan="3">Appears in &lt;15% of EU VC comparable transactions</td><td class="num bc">Yes (Opt.1)</td><td class="bc">Significant outlier ✗</td></tr>
+          <tr><td>Veto over capital raises</td><td colspan="3">None of 12 comparables had this provision</td><td class="num bc">Yes (Opt.1)</td><td class="bc">Unique outlier ✗</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--muted);font-style:italic;margin-top:-10px;">Comparables: Klarna, Soldo, Satispay, Scalapay, SumUp, Younited Credit, Pennylane, Moss, Ageras, Billie, Banxware, Swan. Full dataset in supplementary Excel model.</p>
   </div>
 </div>
 
@@ -492,54 +519,54 @@ strong{color:var(--navy);}
 <div id="page-realworld" class="page">
   <div class="container">
     <div class="sec-title">Real-World Case Studies</div>
-    <div class="sec-desc">Each option maps to a documented transaction illustrating its structural risk in practice.</div>
+    <div class="sec-desc">Each option maps to a documented transaction that illustrates its structural risk profile in practice.</div>
     <div class="grid3">
       <div class="card danger">
         <span class="badge b-red">Option 1 parallel</span>
         <div class="card-title">Groupon — Series D (2010)</div>
-        <div class="card-sub">DST Global &amp; Andreessen Horowitz</div>
-        <p style="font-size:13px;font-family:sans-serif;line-height:1.7;">Groupon accepted a milestone-structured equity extension at a flat valuation with participating preferred shares. At the 2011 IPO at $20/share, layered liquidation preferences absorbed the majority of proceeds for preferred holders. Co-founder Andrew Mason's common stock received a fraction of the headline valuation.</p>
-        <div class="callout c-danger" style="padding:8px 12px;font-size:12px;">Lesson: participating preferred at distressed valuation permanently mortgages founder upside.</div>
+        <div class="card-sub">DST Global &amp; Andreessen Horowitz · Pre-IPO equity extension</div>
+        <p style="font-size:13px;font-family:sans-serif;line-height:1.7;">Groupon accepted a milestone-structured equity extension at a flat valuation with participating preferred shares and strong governance rights. Like Option 1, the extension was priced during commercial underperformance, and existing investors used the distress to negotiate disproportionate protections. At the 2011 IPO at $20/share, layered liquidation preferences absorbed the majority of proceeds for preferred holders — directly analogous to FiscoAI's Option 1 waterfall.</p>
+        <div class="callout c-danger" style="padding:8px 12px;font-size:12px;">Lesson: participating preferred at distressed valuation permanently mortgages founder and early investor upside. The Groupon structure maps exactly to Option 1's 2× preference + participation combination.</div>
       </div>
       <div class="card good featured">
         <span class="badge b-green">Option 2 parallel</span>
         <div class="card-title">Klarna — Convertible bridge (2021–22)</div>
         <div class="card-sub">Existing backers · PIK · Pre-IPO</div>
-        <p style="font-size:13px;font-family:sans-serif;line-height:1.7;">Klarna raised convertible instruments ahead of a planned IPO with PIK interest and a conversion discount. Governance remained undisturbed. When the IPO was delayed and Klarna raised a down-round at $6.7B (vs. $45.6B peak), notes converted at discounted prices — but the company survived and filed for IPO at ~$15B in 2024.</p>
-        <div class="callout c-good" style="padding:8px 12px;font-size:12px;">Lesson: Option 2 works if the company reaches a qualifying event. Without one, the maturity cliff is real.</div>
+        <p style="font-size:13px;font-family:sans-serif;line-height:1.7;">Klarna raised convertible instruments ahead of a planned IPO with PIK interest and a 20% conversion discount. Governance remained undisturbed at signing — identical to Option 2's structure. When the IPO was delayed and Klarna raised a down-round at $6.7B (vs. $45.6B peak), the notes converted at discounted prices, crystallising the maturity cliff risk. The company subsequently filed for IPO at ~$15B in 2024.</p>
+        <div class="callout c-good" style="padding:8px 12px;font-size:12px;">Lesson: Option 2 works when the company achieves a qualifying event. Without one, the maturity cliff is real and costly — as Klarna's down-round conversion demonstrated.</div>
       </div>
       <div class="card warn">
         <span class="badge b-orange">Option 3 parallel</span>
         <div class="card-title">Peloton — Debt facility (2022–23)</div>
-        <div class="card-sub">JP Morgan &amp; Goldman · $750M</div>
-        <p style="font-size:13px;font-family:sans-serif;line-height:1.7;">Peloton, pivoting from D2C to B2B while managing a cash crisis, secured a high-yield debt facility with cash maintenance covenants and IP-adjacent collateral. Annual interest competed directly with turnaround investment. Covenant breaches triggered a 2023 restructuring requiring significant equity dilution and governance concessions.</p>
-        <div class="callout c-warn" style="padding:8px 12px;font-size:12px;">Lesson: cash-pay debt on an unprofitable pivot compounds distress. IP collateral is existential on any default.</div>
+        <div class="card-sub">JP Morgan &amp; Goldman · $750M high-yield</div>
+        <p style="font-size:13px;font-family:sans-serif;line-height:1.7;">Peloton, pivoting from D2C to B2B enterprise while managing a cash crisis, secured a $750M debt facility with cash maintenance covenants and IP-adjacent collateral — mirroring VNTR's covenant structure precisely. Annual interest payments competed directly with turnaround investment. Covenant breaches triggered a 2023 restructuring requiring significant equity dilution and governance concessions. Lenders' collateral position gave them decisive leverage.</p>
+        <div class="callout c-warn" style="padding:8px 12px;font-size:12px;">Lesson: cash-pay debt on an unprofitable pivot compounds distress. IP collateral becomes a weapon in restructuring negotiations.</div>
       </div>
     </div>
 
     <div class="sp"><span class="sec-label">Timelines</span></div>
     <div class="card" style="margin-bottom:14px;">
-      <h3 style="color:var(--red);margin-bottom:12px;">Groupon (Option 1)</h3>
+      <h3 style="color:var(--red);margin-bottom:12px;">Groupon (Option 1 parallel)</h3>
       <div class="timeline">
-        <div class="tl-step"><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-year">2010</div><div class="tl-text">Series D extension — flat valuation, participating preferred, governance rights</div></div>
-        <div class="tl-step"><div class="tl-dot" style="background:var(--orange);"></div><div class="tl-year">2011</div><div class="tl-text">IPO at $20/share — preferred holders capture most proceeds</div></div>
-        <div class="tl-step"><div class="tl-dot" style="background:var(--red);"></div><div class="tl-year">2012</div><div class="tl-text">Stock falls 80%. Common shareholders near zero.</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-year">2010</div><div class="tl-text">Series D at flat valuation — participating preferred + governance rights granted</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--orange);"></div><div class="tl-year">2011</div><div class="tl-text">IPO at $20/share — preferred holders capture most proceeds; founders receive fraction</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--red);"></div><div class="tl-year">2012</div><div class="tl-text">Stock falls 80% from IPO within 12 months. Common shareholders near zero.</div></div>
       </div>
     </div>
     <div class="card" style="margin-bottom:14px;">
-      <h3 style="color:var(--green);margin-bottom:12px;">Klarna (Option 2)</h3>
+      <h3 style="color:var(--green);margin-bottom:12px;">Klarna (Option 2 parallel)</h3>
       <div class="timeline">
-        <div class="tl-step"><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-year">2021</div><div class="tl-text">Convertible bridge at $45.6B — PIK, no governance change</div></div>
-        <div class="tl-step"><div class="tl-dot" style="background:var(--red);"></div><div class="tl-year">2022</div><div class="tl-text">Down-round at $6.7B — notes convert at deep discount</div></div>
-        <div class="tl-step"><div class="tl-dot" style="background:var(--green);"></div><div class="tl-year">2024</div><div class="tl-text">IPO filing at ~$15B — recovery achieved</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-year">2021</div><div class="tl-text">Convertible bridge at $45.6B implied valuation — PIK, 20% discount, no governance change</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--red);"></div><div class="tl-year">2022</div><div class="tl-text">Down-round at $6.7B — notes convert at deep discount, maturity cliff materialises</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--green);"></div><div class="tl-year">2024</div><div class="tl-text">IPO filing at ~$15B — recovery achieved despite the down-round conversion</div></div>
       </div>
     </div>
     <div class="card">
-      <h3 style="color:var(--orange);margin-bottom:12px;">Peloton (Option 3)</h3>
+      <h3 style="color:var(--orange);margin-bottom:12px;">Peloton (Option 3 parallel)</h3>
       <div class="timeline">
-        <div class="tl-step"><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-year">2022</div><div class="tl-text">$750M debt — cash covenants, collateral, 12% rate</div></div>
-        <div class="tl-step"><div class="tl-dot" style="background:var(--red);"></div><div class="tl-year">2023</div><div class="tl-text">Covenant breach — forced restructuring, equity diluted</div></div>
-        <div class="tl-step"><div class="tl-dot" style="background:var(--orange);"></div><div class="tl-year">2024</div><div class="tl-text">New management. Lenders hold strategic influence.</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-year">2022</div><div class="tl-text">$750M debt facility — cash covenants, IP-adjacent collateral, high-yield rate</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--red);"></div><div class="tl-year">2023</div><div class="tl-text">Covenant breach — forced restructuring; lenders' collateral gives decisive leverage</div></div>
+        <div class="tl-step"><div class="tl-dot" style="background:var(--orange);"></div><div class="tl-year">2024</div><div class="tl-text">New management. Lenders retain strategic influence via restructured terms.</div></div>
       </div>
     </div>
   </div>
@@ -548,22 +575,76 @@ strong{color:var(--navy);}
 <!-- ══════ RECOMMENDATION ══════ -->
 <div id="page-recommendation" class="page">
   <div class="container">
-    <div class="sec-title">Recommendation</div>
-    <div class="sec-desc">Final verdict as legal and financial counsel to FiscoAI.</div>
+    <div class="sec-title">Recommendation &amp; Verdict</div>
+    <div class="sec-desc">Final verdict as legal and financial counsel to FiscoAI, including scoring matrix and proposed amendments.</div>
+
     <div class="rec-box">
-      <h3>✓ Accept Option 2 — Convertible Debt (StarFund)</h3>
-      <p>Option 2 is the only structure that simultaneously addresses FiscoAI's immediate capital needs (€10M fully committed, no milestones), preserves governance autonomy through the turnaround (no veto rights, no board seat), and maintains a viable Series C pathway.</p>
-      <p>FiscoAI's problem is not a lack of long-term potential — it is a <strong>lack of time</strong>. Option 2 solves this with the least structural damage.</p>
+      <h3>✓ Recommendation: Accept Option 2 — Convertible Debt (StarFund)</h3>
+      <p>Option 2 is the only structure that simultaneously addresses FiscoAI's immediate capital needs (€10M fully committed, no milestones), preserves governance autonomy through the turnaround (no veto rights, no board seat), and maintains a viable Series C pathway (no reserved matter over capital raises, no full ratchet).</p>
+      <p>FiscoAI's problem is not a lack of long-term potential — it is a <strong>lack of time</strong>. Option 2 solves this with the least structural damage to the cap table and governance framework.</p>
     </div>
+
+    <div class="sp"><span class="sec-label">Multi-criteria scoring matrix — from Excel Recommendation sheet</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Criterion</th><th>Weight</th><th>Opt. 1</th><th>Opt. 2</th><th>Opt. 3</th></tr></thead>
+        <tbody>
+          <tr><td>Immediate capital availability</td><td class="num">20%</td><td class="num bc">2</td><td class="num gc">5</td><td class="num oc">4</td></tr>
+          <tr><td>Governance preservation (founders)</td><td class="num">15%</td><td class="num bc">1</td><td class="num gc">5</td><td class="num oc">4</td></tr>
+          <tr><td>Dilution — immediate impact</td><td class="num">15%</td><td class="num bc">1</td><td class="num gc">5</td><td class="num oc">4</td></tr>
+          <tr><td>Series C readiness</td><td class="num">15%</td><td class="num bc">1</td><td class="num gc">5</td><td class="num oc">3</td></tr>
+          <tr><td>Financial sustainability (cash burden)</td><td class="num">10%</td><td class="num gc">4</td><td class="num gc">4</td><td class="num bc">2</td></tr>
+          <tr><td>Risk of company-ending event</td><td class="num">10%</td><td class="num oc">3</td><td class="num oc">3</td><td class="num bc">1</td></tr>
+          <tr><td>Founder economic upside (€45M exit)</td><td class="num">10%</td><td class="num bc">1</td><td class="num oc">4</td><td class="num oc">4</td></tr>
+          <tr><td>Exit flexibility / investor alignment</td><td class="num">5%</td><td class="num bc">2</td><td class="num gc">4</td><td class="num oc">3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin:16px 0;">
+      <div class="score-bar-wrap">
+        <span class="score-bar-label" style="color:var(--red);">Option 1</span>
+        <div class="score-bar" style="width:35%;background:var(--red);"></div>
+        <span class="score-bar-val" style="color:var(--red);">1.75 / 5.00</span>
+      </div>
+      <div class="score-bar-wrap">
+        <span class="score-bar-label" style="color:var(--green);">Option 2</span>
+        <div class="score-bar" style="width:91%;background:var(--green);"></div>
+        <span class="score-bar-val" style="color:var(--green);">4.55 / 5.00</span>
+      </div>
+      <div class="score-bar-wrap">
+        <span class="score-bar-label" style="color:var(--orange);">Option 3</span>
+        <div class="score-bar" style="width:66%;background:var(--orange);"></div>
+        <span class="score-bar-val" style="color:var(--orange);">3.30 / 5.00</span>
+      </div>
+    </div>
+
+    <div class="sp"><span class="sec-label">Sensitivity — founder proceeds at all exit values</span></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Exit value</th><th>Option 1</th><th>Option 2</th><th>Option 3</th><th>Best for founders</th></tr></thead>
+        <tbody>
+          <tr><td>€15M</td><td class="num">€0.00M</td><td class="num">€0.00M</td><td class="num">€0.00M</td><td>Equal (all zero)</td></tr>
+          <tr><td>€20M</td><td class="num">€0.00M</td><td class="num">€0.00M</td><td class="num">€0.00M</td><td>Equal (all zero)</td></tr>
+          <tr><td>€30M</td><td class="num">€0.00M</td><td class="num">€0.00M</td><td class="num gc">€0.31M</td><td class="gc">Option 3</td></tr>
+          <tr><td>€45M</td><td class="num">€0.84M</td><td class="num">€0.87M</td><td class="num gc"><strong>€1.85M</strong></td><td class="gc">Option 3 (+120%)</td></tr>
+          <tr><td>€60M</td><td class="num">€2.10M</td><td class="num">€2.01M</td><td class="num gc"><strong>€3.38M</strong></td><td class="gc">Option 3 (+61%)</td></tr>
+          <tr><td>€80M</td><td class="num">€3.78M</td><td class="num">€3.54M</td><td class="num gc"><strong>€5.42M</strong></td><td class="gc">Option 3 (+43%)</td></tr>
+          <tr><td>€100M</td><td class="num">€5.45M</td><td class="num">€5.07M</td><td class="num gc"><strong>€7.43M</strong></td><td class="gc">Option 3 (+36%)</td></tr>
+          <tr><td>€120M</td><td class="num">€7.13M</td><td class="num">€6.59M</td><td class="num gc"><strong>€9.44M</strong></td><td class="gc">Option 3 (+32%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout c-warn">Option 3 produces the highest founder proceeds at every exit value above €20M. However this advantage is <strong>conditional on 5 years of successful debt service</strong> without covenant default. The IP pledge creates an existential risk that makes Option 3 unsuitable for FiscoAI's current distressed, pre-profitability position. Option 2 is the risk-adjusted recommendation.</div>
 
     <div class="sp"><span class="sec-label">Why not Option 1</span></div>
     <div class="callout c-danger">
       <ul>
-        <li>Flat €30M pre-money signals no progress — anchors Series C at a weak baseline</li>
-        <li>Full ratchet anti-dilution requires a formal waiver before any Series C investor engages</li>
-        <li>2× participating preference captures 90% of exit proceeds at current valuation</li>
-        <li>5-category veto blocks every future financing round without Series B consent</li>
-        <li>Founder forfeiture clause creates legal exposure and retention risk</li>
+        <li>Series B family captures <strong>87.9% of exit proceeds at €45M</strong> (€39.55M) via preference + participation</li>
+        <li>Full ratchet anti-dilution — outlier in &lt;15% of European comps — requires formal waiver before any Series C investor engages</li>
+        <li>5-category veto right including capital increases blocks every future financing round</li>
+        <li>Flat €30M pre-money signals no progress, anchoring Series C at a weak baseline</li>
+        <li>Founder forfeiture clause creates legal exposure; 4-year lock-up on all shareholders</li>
+        <li>Weighted score: <strong>1.75/5.00</strong></li>
       </ul>
     </div>
 
@@ -571,82 +652,107 @@ strong{color:var(--navy);}
     <div class="callout c-warn">
       <ul>
         <li>IP pledge is existential — any covenant breach gives VNTR the right to seize core technology</li>
-        <li>12% cash interest (€960K–€1.44M/yr) competes directly with R&amp;D and commercial investment</li>
-        <li>EBITDA breakeven within 24 months is unrealistic for a company in pivot</li>
-        <li>IP lien must be released before any Series C can close</li>
-        <li>Total cost of borrowing: ~€18.24M on a €12M facility</li>
+        <li>12% cash interest (€960K–€1.44M/yr) at 75th percentile of peer benchmarks — above market median of 11%</li>
+        <li>Total 5-year cost: <strong>€16.8M on a €12M facility</strong> (€4.8M interest + €12M principal)</li>
+        <li>EBITDA breakeven within 24 months for Tranche 2 is unrealistic for an unprofitable company in pivot</li>
+        <li>IP lien must be fully released before any Series C can close</li>
+        <li>Weighted score: <strong>3.30/5.00</strong></li>
       </ul>
     </div>
 
-    <div class="sp"><span class="sec-label">Two amendments to negotiate</span></div>
+    <div class="sp"><span class="sec-label">Two amendments to negotiate on Option 2</span></div>
     <div class="amend-box">
       <h4>Amendment 1 — Reduce maturity preference from 1.5× to 1× non-participating</h4>
-      <p>The 1.5× participating preference at maturity conversion is disproportionate. A 1× non-participating preference is market-standard for bridge notes converting at maturity. <strong>Counter-offer:</strong> raise the maturity conversion discount slightly from 20% to 25% in exchange.</p>
+      <p>The 1.5× participating preference at maturity conversion is disproportionate to StarFund's risk profile. A 1× non-participating preference is market standard for bridge notes converting at maturity. <strong>Proposed counter-offer:</strong> increase the maturity conversion discount from 20% to 25% in exchange for this reduction.</p>
     </div>
     <div class="amend-box">
       <h4>Amendment 2 — Cap the "most senior class" rights escalation</h4>
-      <p>The current clause lets StarFund's converted shares automatically inherit whatever terms the Series C investor negotiates. <strong>Counter-offer:</strong> cap StarFund's accreted rights at 1× non-participating, or include a buyout option at a modest premium as part of any Series C closing.</p>
+      <p>The current clause lets StarFund's converted shares automatically inherit whatever terms the Series C investor negotiates — a free-rider problem. <strong>Proposed counter-offer:</strong> cap StarFund's accreted rights at 1× non-participating, or include a buyout option at a modest premium as part of any Series C closing.</p>
     </div>
-    <div class="callout c-good">These two amendments preserve StarFund's legitimate return for early-stage risk while removing the structural features most likely to complicate a Series C negotiation.</div>
+    <div class="callout c-good">These two amendments preserve StarFund's legitimate return for early-stage risk while removing the structural features most likely to complicate a Series C negotiation. StarFund, as a SaaS-focused UK fund, has strong commercial incentives to facilitate a qualifying event — these amendments align its formal rights with its economic interests.</div>
+
     <div class="final-box">
-      <div class="fl">Final verdict</div>
-      <p>Option 2 solves FiscoAI's time problem with the least structural damage: full capital committed unconditionally, governance autonomy preserved, cap table clean for a Series C. The maturity cliff is within management's control. The governance harms of Option 1 are not. <strong>Option 2 is our recommendation.</strong></p>
+      <div class="fl">Final verdict — Team 21</div>
+      <p>Option 2 solves FiscoAI's time problem with the least structural damage: full capital committed unconditionally, governance autonomy preserved, cap table clean for a Series C. The maturity cliff is real — but it is within management's control through execution of the enterprise pivot. The governance and distributional harms of Option 1 are not within management's control once signed. The IP existential risk of Option 3 is not acceptable for a currently unprofitable company in turnaround mode. <strong>Option 2 is our recommendation, subject to the two amendments above.</strong></p>
     </div>
   </div>
 </div>
 
-<footer>FiscoAI S.r.l. — Legal &amp; Financial Analysis · April 2026 · For academic purposes</footer>
+<footer>FiscoAI S.r.l. — Legal &amp; Financial Analysis · Team 21 · April 2026 · Bocconi Legal Advice Competition</footer>
 
 <script>
 let currentOpt=1, wfChart=null;
 
 function toggleMenu(){
-  const ham=document.getElementById('ham');
-  const drawer=document.getElementById('drawer');
-  const overlay=document.getElementById('overlay');
-  ham.classList.toggle('open');
-  drawer.classList.toggle('open');
-  overlay.classList.toggle('open');
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('drawer').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
 }
 function closeMenu(){
   document.getElementById('ham').classList.remove('open');
   document.getElementById('drawer').classList.remove('open');
   document.getElementById('overlay').classList.remove('open');
 }
-
-function goPage(id, btn){
+function goPage(id,btn){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.nav-drawer a').forEach(a=>a.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   if(btn) btn.classList.add('active');
-  // highlight drawer item
   document.querySelectorAll('.nav-drawer a').forEach(a=>{
     if(a.getAttribute('onclick')&&a.getAttribute('onclick').includes("'"+id+"'")) a.classList.add('active');
   });
   window.scrollTo({top:0,behavior:'instant'});
   if(id==='waterfall') setTimeout(updateWF,100);
 }
-
 function setOpt(n){
   currentOpt=n;
   [1,2,3].forEach(i=>document.getElementById('btn'+i).classList.toggle('active',i===n));
   updateWF();
 }
 
+// WATERFALL CALCULATOR
+// Option 1: 119,167 total shares (97,500 + 21,667 new)
+//   Tier1: Series B orig 1× = MIN(exit,15)
+//   Tier2: Series B ext 2× = MIN(remaining,20)
+//   Tier3: residual pro-rata 119,167 shares (Series B holds 54,167)
+// Option 2: 131,083 total shares (97,500 + 33,583 StarFund)
+//   Tier1: StarFund 1.5× LP on €12.4M = MIN(exit,18.6)
+//   Tier2: Series B 1× = MIN(remaining,15)
+//   Tier3: residual pro-rata 131,083 shares
+// Option 3: equity pro-rata uses 97,500 shares (pre-warrant base, matching Excel model)
+//   Tier1: VNTR debt = MIN(exit,12)
+//   Tier2: Series B 1× = MIN(remaining,15)
+//   Tier3: residual pro-rata 97,500 shares — VNTR recovers debt only
+
 function calcWF(exit,opt){
   let f,s,a,b,nv;
   if(opt===1){
-    const p1=Math.min(15,exit),a1=Math.max(0,exit-15),p2=Math.min(20,a1),rem=Math.max(0,a1-20),tot=119167;
-    f=rem*(10000/tot);s=rem*(10000/tot);a=rem*(45000/tot);b=p1+p2+rem*(54167/tot);nv=0;
-  }else if(opt===2){
-    const sp=Math.min(12.4,exit),as=Math.max(0,exit-12.4),bp=Math.min(15,as),rem=Math.max(0,as-15),tot=131082;
-    f=rem*(10000/tot);s=rem*(10000/tot);a=rem*(45000/tot);b=bp+rem*(32500/tot);nv=sp+rem*(33582/tot);
-  }else{
-    const d=Math.min(12,exit),ad=Math.max(0,exit-12),bp=Math.min(15,ad),rem=Math.max(0,ad-15),tot=99450;
-    f=rem*(10000/tot);s=rem*(10000/tot);a=rem*(45000/tot);b=bp+rem*(32500/tot);nv=d+rem*(1950/tot);
+    const t1=Math.min(15,exit);
+    const r1=Math.max(0,exit-t1);
+    const t2=Math.min(20,r1);
+    const rem=Math.max(0,r1-t2);
+    const tot=119167;
+    f=rem*(10000/tot); s=rem*(10000/tot); a=rem*(45000/tot);
+    b=t1+t2+rem*(54167/tot); nv=0;
+  } else if(opt===2){
+    const t1=Math.min(18.6,exit);
+    const r1=Math.max(0,exit-t1);
+    const t2=Math.min(15,r1);
+    const rem=Math.max(0,r1-t2);
+    const tot=131083;
+    f=rem*(10000/tot); s=rem*(10000/tot); a=rem*(45000/tot);
+    b=t2+rem*(32500/tot); nv=t1+rem*(33583/tot);
+  } else {
+    const t1=Math.min(12,exit);
+    const r1=Math.max(0,exit-t1);
+    const t2=Math.min(15,r1);
+    const rem=Math.max(0,r1-t2);
+    const tot=97500;
+    f=rem*(10000/tot); s=rem*(10000/tot); a=rem*(45000/tot);
+    b=t2+rem*(32500/tot); nv=t1;
   }
-  return[f,s,a,b,nv].map(v=>Math.round(v*100)/100);
+  return [f,s,a,b,nv].map(v=>Math.round(v*100)/100);
 }
 
 const fmt=v=>'€'+v.toFixed(2)+'M';
@@ -655,16 +761,20 @@ const pct=(v,t)=>t>0?(v/t*100).toFixed(1)+'%':'0%';
 function updateWF(){
   const exit=parseInt(document.getElementById('exitSlider').value);
   document.getElementById('exitVal').textContent='€'+exit+'M';
-  const[f,s,a,b,nv]=calcWF(exit,currentOpt);
+  const [f,s,a,b,nv]=calcWF(exit,currentOpt);
   const total=f+s+a+b+nv;
   const isO1=currentOpt===1;
-  const labels=isO1?['Founders','Seed','Series A','Series B']:currentOpt===2?['Founders','Seed','Series A','Series B','StarFund']:['Founders','Seed','Series A','Series B','VNTR'];
+  const labels=isO1?['Founders','Seed','Series A','Series B']:
+               currentOpt===2?['Founders','Seed','Series A','Series B','StarFund']:
+               ['Founders','Seed','Series A','Series B','VNTR'];
   const colors=['#2563a8','#3b7dd8','#1a6b3a','#9b2335','#b8860b'];
   const vals=isO1?[f,s,a,b]:[f,s,a,b,nv];
   const cols=isO1?colors.slice(0,4):colors;
 
-  document.getElementById('wf-legend').innerHTML=labels.map((l,i)=>`<span class="leg-item"><span class="leg-sq" style="background:${cols[i]}"></span>${l}</span>`).join('');
-  document.getElementById('wf-cards').innerHTML=vals.map((v,i)=>`<div class="mc"><div class="mc-label">${labels[i]}</div><div class="mc-val" style="font-size:15px;">${fmt(v)}</div><div class="mc-sub">${pct(v,total)}</div></div>`).join('');
+  document.getElementById('wf-legend').innerHTML=labels.map((l,i)=>
+    `<span class="leg-item"><span class="leg-sq" style="background:${cols[i]}"></span>${l}</span>`).join('');
+  document.getElementById('wf-cards').innerHTML=vals.map((v,i)=>
+    `<div class="mc"><div class="mc-label">${labels[i]}</div><div class="mc-val" style="font-size:15px;">${fmt(v)}</div><div class="mc-sub">${pct(v,total)}</div></div>`).join('');
 
   if(wfChart){wfChart.destroy();wfChart=null;}
   const canvas=document.getElementById('wfChart');
@@ -682,10 +792,16 @@ function updateWF(){
     }
   });
 
-  const bases=[['Common','Common','Preferred','1× + 2× pref + part.',''],['Common','Common','Preferred','1× pref + part.','Debt + conv.'],['Common','Common','Preferred','1× pref + part.','Debt + warrants']];
-  document.getElementById('wf-table').innerHTML=`<div class="tbl-wrap"><table><thead><tr><th>Stakeholder</th><th>Proceeds</th><th>%</th></tr></thead><tbody>${vals.map((v,i)=>`<tr><td>${labels[i]}</td><td class="num">${fmt(v)}</td><td class="num">${pct(v,total)}</td></tr>`).join('')}</tbody></table></div>`;
+  document.getElementById('wf-table').innerHTML=`<div class="tbl-wrap"><table>
+    <thead><tr><th>Stakeholder</th><th>Proceeds</th><th>% of exit</th></tr></thead>
+    <tbody>${vals.map((v,i)=>`<tr><td>${labels[i]}</td><td class="num">${fmt(v)}</td><td class="num">${pct(v,total)}</td></tr>`).join('')}
+    </tbody></table></div>`;
 
-  const notes=[`At €${exit}M under Option 1, Series B captures ${pct(b,total)}. Founders &amp; Seed each get only ${pct(f,total)}.`,`At €${exit}M under Option 2, StarFund gets ${pct(nv,total)}. Existing holders retain ${pct(f+s+a+b,total)} — far more balanced than Option 1.`,`At €${exit}M under Option 3, VNTR recovers €${Math.min(12,exit).toFixed(1)}M debt first. Remaining ${fmt(Math.max(0,exit-12))} goes to equity — cleanest equity waterfall of the three.`];
+  const notes=[
+    `At €${exit}M under Option 1, Series B captures ${pct(b,total)} of all proceeds (1× pref + 2× ext. pref + participation). Founders & Seed each get ${pct(f,total)}.`,
+    `At €${exit}M under Option 2, StarFund's €18.6M senior claim is satisfied first, then Series B's 1× preference, then residual splits pro-rata. Existing holders retain ${pct(f+s+a+b,total)} collectively.`,
+    `At €${exit}M under Option 3, VNTR recovers €${Math.min(12,exit).toFixed(1)}M debt first. Remaining ${fmt(Math.max(0,exit-12))} flows through the equity waterfall — the cleanest distribution above the debt layer.`
+  ];
   document.getElementById('wf-note').textContent=notes[currentOpt-1];
 }
 </script>
